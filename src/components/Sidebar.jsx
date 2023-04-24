@@ -1,10 +1,9 @@
 import React from 'react'
 import {Link,NavLink} from 'react-router-dom';
-import{SiShopware} from 'react-icons/si';
 import {MdOutlineCancel} from 'react-icons/md';
 import {TooltipComponent} from '@syncfusion/ej2-react-popups';
 import{useStateContext}  from '../contexts/ContextProvider';
-
+import myImage from '../assests/data/logos/1(1).png'
 
 import {links} from '../assests/data/dummy';
 
@@ -25,11 +24,16 @@ const Sidebar = () => {
   
    return (
     <div className = "ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10 " >
+
+<div className="flex justify-center">
+  <img src={myImage} alt="My Image" className="sidebar-image w-20 h-20" />
+</div>
+
       {activeMenu &&(<>
       <div className="flex justify-between items-center">
 
         <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
-        <div><img className="image-sizing-secondary" src="./assests/data/logos/favicon-32.png" /></div>
+        
         
 <span >FoodCare</span>
         </Link>

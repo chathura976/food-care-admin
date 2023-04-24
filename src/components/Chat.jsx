@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdOutlineCancel } from 'react-icons/md';
+import { BsChatLeft } from 'react-icons/bs';
 
 import { Button } from '.';
 import { chatData } from '../assests/data/dummy';
@@ -18,7 +18,7 @@ const Chat = () => {
           </button>
         </div>
         <Button
-          icon={<MdOutlineCancel />}
+          icon={<BsChatLeft />}
           color="rgb(153, 171, 180)"
           bgHoverColor="light-gray"
           size="2xl"
@@ -60,4 +60,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default Chat
