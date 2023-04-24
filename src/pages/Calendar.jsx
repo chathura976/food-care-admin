@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ScheduleComponent, ViewsDirective, ViewDirective, Day, Week, WorkWeek, Month, Agenda, Inject, Resize, DragAndDrop } from '@syncfusion/ej2-react-schedule';
 import { DatePickerComponent } from '@syncfusion/ej2-react-calendars';
 
-import { scheduleData } from '../data/dummy';
+import { scheduleData } from '../assests/data/dummy';
 import { Header } from '../components';
 
 // eslint-disable-next-line react/destructuring-assignment
@@ -32,7 +32,7 @@ const Scheduler = () => {
         dragStart={onDragStart}
       >
         <ViewsDirective>
-          { ['Day', 'Week', 'WokWeek', 'Month', 'Agenda'].map((item) => <ViewDirective key={item} option={item} />)}
+          { ['Day', 'Week', 'WorkWeek', 'Month', 'Agenda'].map((item) => <ViewDirective key={item} option={item} />)}
         </ViewsDirective>
         <Inject services={[Day, Week, WorkWeek, Month, Agenda, Resize, DragAndDrop]} />
       </ScheduleComponent>

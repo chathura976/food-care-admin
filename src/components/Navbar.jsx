@@ -93,7 +93,7 @@ const Navbar = () => {
 
       </TooltipComponent>
 
-      {isClicked.chat && <Chat/>}
+      {isClicked.Chat && <Chat/>}
       {isClicked.Notification && <Notification/>}
       {isClicked.UserProfile && <UserProfile/>}
 

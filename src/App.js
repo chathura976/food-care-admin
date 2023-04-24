@@ -4,7 +4,7 @@ import {FiSettings} from 'react-icons/fi'
 import{ TooltipComponent} from '@syncfusion/ej2-react-popups'
 
 import{Navbar,Footer,Sidebar,ThemeSettings} from './components';
-import {Dashboard,FoodPosts,Calendar,Admin,Stacked,Pyramid,Users,Area,Line,Bar,Pie,ColorPicker,ColorMapping,Editor} from './pages';
+import {Dashboard,FoodPosts,Calendar,Admin,Stacked,Pyramid,Chat,Area,Line,Bar,Pie,ColorPicker,ColorMapping,Editor} from './pages';
 import {useStateContext} from './contexts/ContextProvider'
 import './App.css';
 
@@ -63,7 +63,8 @@ const App = () => {
                  {/*pages */}
                  <Route path="/Food-posts" element={<FoodPosts/>}/>
                  <Route path="/Admin" element={<Admin/>}/>
-                 <Route path="/Users" element={<Users/>}/>
+                 <Route path="/Chat" element={<Chat/>}/>
+                 
 
                 {/* Apps*/}
                 <Route path="/Calendar" element={<Calendar/>}/>
