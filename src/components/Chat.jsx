@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsChatLeft } from 'react-icons/bs';
+import { BsChatLeftDots } from 'react-icons/bs';
 
 import { Button } from '.';
 import { chatData } from '../assests/data/dummy';
@@ -18,7 +18,7 @@ const Chat = () => {
           </button>
         </div>
         <Button
-          icon={<BsChatLeft />}
+          icon={<BsChatLeftDots/>}
           color="rgb(153, 171, 180)"
           bgHoverColor="light-gray"
           size="2xl"
