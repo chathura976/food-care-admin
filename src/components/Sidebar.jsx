@@ -1,13 +1,11 @@
 import React from "react";
-import { BrowserRouter, Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { MdOutlineCancel } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "../contexts/ContextProvider";
 import myImage from "../assests/data/logos/1(1).png";
 
 import { links } from "../assests/data/dummy";
-import { Dashboard } from "../pages";
-
 
 const Sidebar = () => {
   // const { activeMenu, setActiveMenu, screenSize } = useStateContext();
@@ -76,91 +74,6 @@ const Sidebar = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-columns-gap"
-                  viewBox="0 0 16 16"
-                >
-                  {" "}
-                  <path d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z" />{" "}
-                </svg>
-
-                <span class="flex-1 ml-3 whitespace-nowrap ">Dashboard</span>
-                </Link>
-              
-            </li>
-
-            
-
-            <li className=" mt-4">
-              <Link
-                
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 "
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 256 256"
-                  id="IconChangeColor"
-                  height="24"
-                  width="24"
-                >
-                  <rect width="256" height="256" fill="none"></rect>
-                  <path
-                    d="M32,216V56a8,8,0,0,1,8-8H216a8,8,0,0,1,8,8V216l-32-16-32,16-32-16L96,216,64,200Z"
-                    fill="#ffffff"
-                    stroke="#000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="12"
-                    id="mainIconPathAttribute"
-                  ></path>
-                  <line
-                    x1="144"
-                    y1="112"
-                    x2="192"
-                    y2="112"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="12"
-                  ></line>
-                  <line
-                    x1="144"
-                    y1="144"
-                    x2="192"
-                    y2="144"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="12"
-                  ></line>
-                  <rect
-                    x="64"
-                    y="96"
-                    width="48"
-                    height="64"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="12"
-                  ></rect>
-                </svg>
-
-                <span class="flex-1 ml-3 whitespace-nowrap ">Posts</span>
-              </Link>
-            </li>
-
-            <li class="mt-4">
-              <Link
-                
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
                   fill="currentColor"
@@ -183,12 +96,12 @@ const Sidebar = () => {
                 <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   3
                 </span>
-              </Link>
+              </a>
             </li>
 
             <li class="mt-4">
-              <Link
-                
+              <a
+                href="#"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <svg
@@ -208,12 +121,12 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
-              </Link>
+              </a>
             </li>
 
             <li class="mt-4">
-              <Link
-                
+              <a
+                href="#"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <svg
@@ -239,12 +152,12 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Admin</span>
-              </Link>
+              </a>
             </li>
 
             <li class="mt-4">
-              <Link
-                
+              <a
+                href="#"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <svg
@@ -268,12 +181,12 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Calendar</span>
-              </Link>
+              </a>
             </li>
 
             <li class="mt-4">
-              <Link
-               
+              <a
+                href="#"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <svg
@@ -298,12 +211,12 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Editor</span>
-              </Link>
+              </a>
             </li>
 
             <li class="mt-4">
-              <Link
-                
+              <a
+                href="#"
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <svg
@@ -329,7 +242,7 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">ColorPicker</span>
-              </Link>
+              </a>
             </li>
           </ul>
 
