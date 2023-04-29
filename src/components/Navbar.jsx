@@ -1,65 +1,69 @@
-import React, { useEffect } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-
-import { BsChatLeft } from "react-icons/bs";
-import { RiNotification3Line } from "react-icons/ri";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import React, {useEffect } from "react";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-
-import avatar from "../assests/data/avatar.jpg";
-import { Chat, Notification, UserProfile } from ".";
 import { useStateContext } from "../contexts/ContextProvider";
+import Logo from "../assests/data/logos/login.png";
 
-const NavButton =({title,customFunc,icon,color,dotcolor}) => (
-<TooltipComponent content={title} position='BottomCenter' >
+const NavButton = ({ title, customFunc, icon, color, dotcolor }) => (
+  <TooltipComponent content={title} position="BottomCenter">
+    <button
+      type="button"
+      onClick={customFunc}
+      style={{ color }}
+      classNameName="relative text-xl rounded-full p-3
+  hover:bg-light-gray"
+    >
+      <span
+        style={{ background: dotcolor }}
+        classNameName="absolute inline-flex
+  rpunded-full h-2 w-2 right-2 top-2 "
+      />
 
-  <button type='button' onClick={customFunc}
-  style={{color}}
-  classNameName="relative text-xl rounded-full p-3
-  hover:bg-light-gray">
-  <span style= {{background:dotcolor}} classNameName="absolute inline-flex
-  rpunded-full h-2 w-2 right-2 top-2 "/>
-
-  {icon}
-  </button>
-
-</TooltipComponent>
-)
+      {icon}
+    </button>
+  </TooltipComponent>
+);
 
 const Navbar = () => {
-  const{activeMenu,setActiveMenu,isClicked,setisClicked,handleClick,screenSize,setscreenSize} =useStateContext();
+  const {
+    activeMenu,
+    setActiveMenu,
+    isClicked,
+    setisClicked,
+    handleClick,
+    screenSize,
+    setscreenSize,
+  } = useStateContext();
 
-  useEffect(()=> {
-   const handleResize = ()=> setscreenSize(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setscreenSize(window.innerWidth);
 
-   window.addEventListener('resize',handleResize);
+    window.addEventListener("resize", handleResize);
 
-   handleResize();
+    handleResize();
 
-   return() => window.removeEventListener('resize',handleResize);
-  },[] );
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-      useEffect (()=> {
-      if(screenSize <= 900){
-        setActiveMenu(false);
-      } else{
-        setActiveMenu(true);
-      }
-
-      },[screenSize])
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
 
   return (
-    <div>
+    <div className="main-content">
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="https://flowbite.com/" className="flex items-center">
             <img
-              src="https://flowbite.com/docs/images/logo.svg"
+              src={Logo}
               className="h-8 mr-3"
-              alt="Flowbite Logo"
+              alt="Food Care Logo"
             />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+              Food Care
             </span>
           </a>
           <div className="flex md:order-2">
