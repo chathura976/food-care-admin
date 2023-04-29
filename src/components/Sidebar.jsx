@@ -53,7 +53,7 @@ const Sidebar = () => {
         aria-label="Sidebar"
         style={{ overflow: "auto" }}
       >
-        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 mt-15">
+        <div class="h-full px-3 py-20 overflow-y-auto bg-gray-50 dark:bg-gray-800 mt-15">
           <ul className=" list-none space-y-2 font-medium list-disc">
             <SidebarRow
               path="/dashboard"
