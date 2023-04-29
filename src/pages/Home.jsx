@@ -1,9 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import { Navbar, Sidebar } from "../components";
 import { Dashboard, FoodPosts, Calendar, Login } from "../pages";
-import {useStateContext} from '../contexts/ContextProvider'
+import { useStateContext } from "../contexts/ContextProvider";
+
 const Home = () => {
-    const{activeMenu} = useStateContext();
+  const { activeMenu } = useStateContext();
   return (
     <div className="flex relative dark:bg-main-dark-bg">
       {activeMenu ? (
@@ -28,7 +29,7 @@ const Home = () => {
 
         <div>
           <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/food-posts" element={<FoodPosts />} />
             <Route path="/calendar" element={<Calendar />} />
           </Routes>
@@ -37,4 +38,4 @@ const Home = () => {
     </div>
   );
 };
-export default Home
+export default Home;
