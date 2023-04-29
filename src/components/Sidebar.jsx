@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { MdOutlineCancel } from "react-icons/md";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "../contexts/ContextProvider";
@@ -8,6 +8,7 @@ import myImage from "../assests/data/logos/1(1).png";
 import { links } from "../assests/data/dummy";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   // const { activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   // const handleCloseSideBar = () => {
@@ -62,14 +63,34 @@ const Sidebar = () => {
 
         <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 mt-15">
           <ul className=" list-none space-y-2 font-medium list-disc">
+            <li class="mt-4">
+              <Link
+                to="/dashboard"
+                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="currentColor"
+                  class="bi bi-columns-gap"
+                  viewBox="0 0 16 16"
+                  id="IconChangeColor"
+                >
+                  {" "}
+                  <path
+                    d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z"
+                    id="mainIconPathAttribute"
+                  ></path>{" "}
+                </svg>
 
-            
+                <span class="flex-1 ml-3 whitespace-nowrap">Dashboard</span>
+              </Link>
+            </li>
 
             <li class="mt-4">
               <Link
-
-                to="/dashboard"
-                
+          
                 class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <svg
@@ -96,14 +117,11 @@ const Sidebar = () => {
                 <span class="inline-flex items-center justify-center w-3 h-3 p-3 ml-3 text-sm font-medium text-blue-800 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
                   3
                 </span>
-              </a>
+              </Link>
             </li>
 
             <li class="mt-4">
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
+              <Link class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -121,14 +139,11 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
-              </a>
+              </Link>
             </li>
 
             <li class="mt-4">
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
+              <Link class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -152,14 +167,11 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Admin</span>
-              </a>
+              </Link>
             </li>
 
             <li class="mt-4">
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
+              <Link to="/calendar" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -181,14 +193,11 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Calendar</span>
-              </a>
+              </Link>
             </li>
 
             <li class="mt-4">
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
+              <Link class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -211,14 +220,11 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">Editor</span>
-              </a>
+              </Link>
             </li>
 
             <li class="mt-4">
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
-              >
+              <Link class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -242,16 +248,13 @@ const Sidebar = () => {
                 </svg>
 
                 <span class="flex-1 ml-3 whitespace-nowrap">ColorPicker</span>
-              </a>
+              </Link>
             </li>
           </ul>
 
           <ul class="pt-4 mt-4 space-y-2 font-medium border-t border-gray-200 dark:border-gray-700">
             <li>
-              <a
-                href="#"
-                class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group"
-              >
+              <Link class="flex items-center p-2 text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-white group">
                 <svg
                   aria-hidden="true"
                   class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:group-hover:text-white dark:text-gray-400"
@@ -268,7 +271,7 @@ const Sidebar = () => {
                   ></path>
                 </svg>
                 <span class="ml-4">Upgrade to Pro</span>
-              </a>
+              </Link>
             </li>
             <li>
               <a

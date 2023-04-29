@@ -15,7 +15,7 @@ import {
 import { DatePickerComponent } from "@syncfusion/ej2-react-calendars";
 
 import { scheduleData } from "../assests/data/dummy";
-import { Header } from "../components";
+import { Header, Layout } from "../components";
 
 // eslint-disable-next-line react/destructuring-assignment
 const PropertyPane = (props) => <div className="mt-5">{props.children}</div>;
@@ -34,6 +34,8 @@ const Scheduler = () => {
   };
 
   return (
+    <div>
+      <Layout>
     <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
       <Header category="App" title="Calendar" />
       <ScheduleComponent
@@ -69,6 +71,8 @@ const Scheduler = () => {
           </tbody>
         </table>
       </PropertyPane>
+    </div>
+    </Layout>
     </div>
   );
 };
