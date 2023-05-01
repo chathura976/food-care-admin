@@ -1,6 +1,6 @@
 import { useNavigate, Routes, Route } from "react-router-dom";
 
-import { Login, Dashboard, FoodPosts, Calendar } from "../src/pages";
+import { Login, Dashboard, FoodPosts, Calendar, Chat } from "../src/pages";
 
 const App = () => {
   const navigate = useNavigate();
@@ -17,6 +17,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/food-posts" element={<FoodPosts />} />
         <Route path="/calendar" element={<Calendar />} />
+        <Route path="/chat" element={<Chat/>} />
       </Routes>
     </div>
   );

@@ -14,7 +14,7 @@ const SidebarRow = (props) => {
           height="24"
           fill="currentColor"
           className="bi bi-columns-gap"
-          viewBox="0 0 16 16"
+          viewBox="0 0 22 22"
           id="IconChangeColor"
         >
           {" "}
