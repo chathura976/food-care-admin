@@ -5,12 +5,6 @@ import LogoImg from "../assests/data/logos/1(1).png";
 const Login = ({ handleLogin }) => {
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // handle login logic here
-    handleLogin();
-  };
-
   return (
     <section class="">
       <div class="">
