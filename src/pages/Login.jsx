@@ -9,7 +9,6 @@ const Login = ({ handleLogin }) => {
     event.preventDefault();
     // handle login logic here
     handleLogin();
-    navigate("/home");
   };
 
   return (
