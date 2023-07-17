@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { Sidebar, Navbar } from "../components";
 import { useStateContext } from "../contexts/ContextProvider";
 
+
 const Layout = ({ children }) => {
   const { activeMenu } = useStateContext();
   const divRef = useRef(null);
@@ -26,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <div ref={divRef} className="relative">
         <div className="fixed top-0 z-50">
-          <Navbar />
+          <Navbar/>
         </div>
         <div className="flex">
           <div className="relative">
