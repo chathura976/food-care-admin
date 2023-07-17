@@ -58,6 +58,7 @@ const Navbar = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
+              
               <span className="sr-only">Search</span>
             </button>
             <div className="relative hidden md:block">

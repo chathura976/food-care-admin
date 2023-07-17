@@ -24,28 +24,24 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <div ref={divRef} className="relative">
-        <div className="fixed top-0 z-50">
-          <Navbar />
+      <div ref={divRef} className="relative flex">
+        <div className="relative">
+          {activeMenu ? (
+            <div className=" w-72 sidebar dark:bg-secondary-dark-bg bg-white">
+              <Sidebar />
+            </div>
+          ) : (
+            <div className="w-0 dark:bg-secondary-dark-bg">
+              <Sidebar />
+            </div>
+          )}
         </div>
-        <div className="flex">
-          <div className="relative">
-            {activeMenu ? (
-              <div className="w-72 sidebar dark:bg-secondary-dark-bg bg-white">
-                <Sidebar />
-              </div>
-            ) : (
-              <div className="w-0 dark:bg-secondary-dark-bg">
-                <Sidebar />
-              </div>
-            )}
-          </div>
-          <div className="flex-1 relative">
-            <div className= "pt-10 pr-5">{children}</div>
-          </div>
+
+        <div className="flex-1 relative">
+          <Navbar/>
+          <div className="pt-10 pr-5">{children}</div>
         </div>
       </div>
-      
     </>
   );
 };
