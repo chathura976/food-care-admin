@@ -4,43 +4,44 @@ import { useStateContext } from "../contexts/ContextProvider";
 
 const Layout = ({ children }) => {
   const { activeMenu } = useStateContext();
-  const navbarRef = useRef(null);
+  const divRef = useRef(null);
 
   useEffect(() => {
-    const navbarHeight = navbarRef.current.offsetHeight;
-    const mainContent = document.querySelector(".main-content");
-    if (mainContent) {
-      mainContent.style.paddingTop = `${navbarHeight}px`;
-    }
+    const handleResize = () => {
+      if (divRef.current) {
+        divRef.current.style.width = `${window.innerWidth}px`;
+        divRef.current.style.height = `${window.innerHeight}px`;
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
     <>
-      <div className="flex relative dark:bg-main-dark-bg">
-        {activeMenu ? (
-          <div className="w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white">
-            <Sidebar />
+      <div ref={divRef} className="relative">
+        <div className="fixed top-0 z-50">
+          <Navbar />
+        </div>
+        <div className="flex">
+          <div className="relative">
+            {activeMenu ? (
+              <div className="w-72 sidebar dark:bg-secondary-dark-bg bg-white">
+                <Sidebar />
+              </div>
+            ) : (
+              <div className="w-0 dark:bg-secondary-dark-bg">
+                <Sidebar />
+              </div>
+            )}
           </div>
-        ) : (
-          <div className="w-0 dark:bg-secondary-dark-bg">
-            <Sidebar />
-          </div>
-        )}
-        <div
-          className={
-            activeMenu
-              ? "dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full  "
-              : "bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 "
-          }
-        >
-          <div
-            ref={navbarRef}
-            className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full"
-          >
-            <Navbar />
-          </div>
-          <div className="dark:bg-main-dark-bg bg-main-bg min-h-screen md:ml-72 w-full">
-            <div className="p-8">{children}</div>
+          <div className="flex-1 relative">
+            <div className= "pt-10 pr-5">{children}</div>
           </div>
         </div>
       </div>

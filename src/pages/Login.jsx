@@ -1,10 +1,18 @@
-import { useNavigate } from "react-router-dom";
+import React,{ useContext, useState } from "react";
 import LoginImg from "../assests/data/Background.jpg";
 import LogoImg from "../assests/data/logos/1(1).png";
+import { AuthContext } from "../contexts/authContext/AuthContext";
+import { login } from "../contexts/authContext/apiCalls";
 
-const Login = ({ handleLogin }) => {
-  const navigate = useNavigate();
-
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { isFetching, dispatch } = useContext(AuthContext);
+  const handleLogin = (e) => {
+    console.log("hi");
+    e.preventDefault();
+    login({ email, password }, dispatch);
+  };
   return (
     <section class="">
       <div class="">
@@ -38,6 +46,7 @@ const Login = ({ handleLogin }) => {
                       Your email
                     </label>
                     <input
+                      onChange={(e) => setEmail(e.target.value)}
                       type="email"
                       name="email"
                       id="email"
@@ -54,6 +63,7 @@ const Login = ({ handleLogin }) => {
                       Your password
                     </label>
                     <input
+                      onChange={(e) => setPassword(e.target.value)}
                       type="password"
                       name="password"
                       id="password"
@@ -80,21 +90,20 @@ const Login = ({ handleLogin }) => {
                       >
                         Remember this device
                       </label>
-                    </div>
-                    
-                      {" "}
-                      &nbsp;
-                      <a
-                        href="#"
-                        class="ml-auto text-sm font-medium text-blue-400 hover:underline dark:text-blue-500"
-                      >
-                        forgot Password?
-                      </a>
-                    {" "}
+                    </div>{" "}
+                    &nbsp;
+                    <a
+                      href="#"
+                      class="ml-auto text-sm font-medium text-blue-400 hover:underline dark:text-blue-500"
+                    >
+                      forgot Password?
+                    </a>{" "}
                     &nbsp;
                   </div>
 
                   <button
+                    onClick={handleLogin}
+                    disabled={isFetching}
                     type="submit"
                     class="w-full px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 sm:w-auto dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                   >

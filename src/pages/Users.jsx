@@ -7,7 +7,7 @@ const Users = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("/users/users");
+        const response = await axios.get("/api/users/users");
         setUsers(response.data);
       } catch (error) {
         console.log(error);

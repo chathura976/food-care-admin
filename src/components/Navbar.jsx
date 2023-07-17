@@ -1,67 +1,38 @@
-import React, {useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "../contexts/ContextProvider";
 import Logo from "../assests/data/logos/login.png";
 
-const NavButton = ({ title, customFunc, icon, color, dotcolor }) => (
-  <TooltipComponent content={title} position="BottomCenter">
-    <button
-      type="button"
-      onClick={customFunc}
-      style={{ color }}
-      classNameName="relative text-xl rounded-full p-3
-  hover:bg-light-gray"
-    >
-      <span
-        style={{ background: dotcolor }}
-        classNameName="absolute inline-flex
-  rpunded-full h-2 w-2 right-2 top-2 "
-      />
-
-      {icon}
-    </button>
-  </TooltipComponent>
-);
-
 const Navbar = () => {
-  const {
-    activeMenu,
-    setActiveMenu,
-    isClicked,
-    setisClicked,
-    handleClick,
-    screenSize,
-    setscreenSize,
-  } = useStateContext();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   useEffect(() => {
-    const handleResize = () => setscreenSize(window.innerWidth);
+    const closeMobileMenu = () => {
+      setIsMobileMenuOpen(false);
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        closeMobileMenu();
+      }
+    };
 
     window.addEventListener("resize", handleResize);
-
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
-
-  useEffect(() => {
-    if (screenSize <= 900) {
-      setActiveMenu(false);
-    } else {
-      setActiveMenu(true);
-    }
-  }, [screenSize]);
 
   return (
     <div className="main-content">
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="https://flowbite.com/" className="flex items-center">
-            <img
-              src={Logo}
-              className="h-8 mr-3"
-              alt="Food Care Logo"
-            />
+          <a href="" className="flex items-center">
+            <img src={Logo} className="h-8 mr-3" alt="Food Care Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
               Food Care
             </span>
