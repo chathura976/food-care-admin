@@ -10,10 +10,10 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   const menus = [
     { name: "Dashboard", link: "/", icon: MdOutlineDashboard },
-    { name: "Users", link: "/", icon: AiOutlineUser },
-    { name: "Chat", link: "/", icon: FiMessageSquare },
-    { name: "FoodPosts", link: "/", icon: MdOutlineFastfood },
-    { name: "Calendar", link: "/", icon: BsCalendarMonth },
+    { name: "Users", link: "/Users", icon: AiOutlineUser },
+    { name: "Chat", link: "/Chat", icon: FiMessageSquare },
+    { name: "FoodPosts", link: "/FoodPosts", icon: MdOutlineFastfood },
+    { name: "Calendar", link: "/Calender", icon: BsCalendarMonth },
     { name: "Setting", link: "/", icon: RiSettings4Line },
   ];
 

@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Layout } from '../components';
 
 const Chat = () => {
   return (
-    <div>Chat</div>
+    <div>
+    <Layout>
+      <div>Chat</div>
+    </Layout>
+    </div>
   )
 }
+
+
 
 export default Chat
