@@ -1,20 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
 import { ContextProvider } from "./contexts/ContextProvider";
 import { AuthContextProvider } from "./contexts/authContext/AuthContext";
-
+import { ThemeProvider } from "@material-tailwind/react";
 ReactDOM.render(
-
-    <AuthContextProvider>
+  <AuthContextProvider>
     <ContextProvider>
-      <App />
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
     </ContextProvider>
-    </AuthContextProvider>,
- 
-  
+  </AuthContextProvider>,
+
   document.getElementById("root")
 );

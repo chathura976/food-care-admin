@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { Sidebar, Navbar } from "../components";
 import { useStateContext } from "../contexts/ContextProvider";
 
+
 const Layout = ({ children }) => {
   const { activeMenu } = useStateContext();
   const divRef = useRef(null);
