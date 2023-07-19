@@ -6,6 +6,7 @@ import { BsCalendarMonth } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Sidebar = () => {
   const menus = [
@@ -76,6 +77,8 @@ const Sidebar = () => {
         </div>
       </aside>
       <div className={`ml-auto ${open ? "mr-72" : "mr-16"}`}>
+      <Navbar sidebarOpen={open} />
+
         {/* Render your navbar items here */}
         {/* Adjust the CSS classes and layout based on your specific navbar implementation */}
       </div>
