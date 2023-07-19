@@ -9,7 +9,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const { isFetching, dispatch } = useContext(AuthContext);
   const handleLogin = (e) => {
-    console.log("hi");
     e.preventDefault();
     login({ email, password }, dispatch);
   };
