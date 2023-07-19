@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
+import Logo from "../assests/data/logos/login.png";
 
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
@@ -32,6 +33,12 @@ export default function Navbar() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-end sm:items-stretch sm:justify-end">
+                <a href="" className="flex items-center">
+                  <img src={Logo} className="h-8 mr-3" alt="Food Care Logo" />
+                  <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                    Food Care
+                  </span>
+                </a>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (

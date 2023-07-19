@@ -75,6 +75,10 @@ const Sidebar = () => {
           </div>
         </div>
       </aside>
+      <div className={`ml-auto ${open ? "mr-72" : "mr-16"}`}>
+        {/* Render your navbar items here */}
+        {/* Adjust the CSS classes and layout based on your specific navbar implementation */}
+      </div>
     </div>
   );
 };
