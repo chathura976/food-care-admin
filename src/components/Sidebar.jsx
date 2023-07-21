@@ -7,7 +7,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
-
+import { motion } from "framer-motion";
 const Sidebar = () => {
   const menus = [
     { name: "Dashboard", link: "/", icon: MdOutlineDashboard },
@@ -28,7 +28,9 @@ const Sidebar = () => {
     <div className="flex gap-6 main-content">
       <aside
         id="separator-sidebar"
-        className={`fixed top-0 left-0 z-40 ${open ? "w-72" : "w-16"} h-screen transition-transform -translate-x-full sm:translate-x-0`}
+        className={`fixed top-0 left-0 z-40 ${
+          open ? "w-72" : "w-16"
+        } h-screen transition-transform -translate-x-full sm:translate-x-0`}
         aria-label="Sidebar"
         style={{ overflow: "auto" }}
       >
@@ -44,40 +46,44 @@ const Sidebar = () => {
               onClick={() => setOpen(!open)}
             />
           </div>
-          <div className="mt-4 flex flex-col gap-4 relative">
-            {menus?.map((menu, i) => (
-              <Link
-                to={menu?.link}
-                key={i}
-                className={`${
-                  menu?.margin && "mt-5"
-                } group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
-              >
-                <div>{React.createElement(menu?.icon, { size: "20" })}</div>
-                <span
-                  style={{
-                    transitionDelay: `${i + 3}00ms`,
-                  }}
-                  className={`whitespace-pre duration-500 ${
-                    !open && "opacity-0 translate-x-28 overflow-hidden"
-                  }`}
-                >
-                  {menu?.name}
-                </span>
-                <span
+
+          <motion.div transition={{ duration: 0.5 }}>
+            <div className="mt-4 flex flex-col gap-4 relative">
+              {menus?.map((menu, i) => (
+                <Link
+                  to={menu?.link}
+                  key={i}
                   className={`${
-                    open && "hidden"
-                  } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit`}
+                    menu?.margin && "mt-5"
+                  } group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
                 >
-                  {menu?.name}
-                </span>
-              </Link>
-            ))}
-          </div>
+                  <div>{React.createElement(menu?.icon, { size: "20" })}</div>
+                  <span
+                    style={{
+                      transitionDelay: `${i + 3}00ms`,
+                    }}
+                    className={`whitespace-pre duration-500 ${
+                      !open && "opacity-0 translate-x-28 overflow-hidden"
+                    }`}
+                  >
+                    {menu?.name}
+                  </span>
+                  <span
+                    className={`${
+                      open && "hidden"
+                    } absolute left-48 bg-white font-semibold whitespace-pre text-gray-900 rounded-md drop-shadow-lg px-0 py-0 w-0 overflow-hidden group-hover:px-2 group-hover:py-1 group-hover:left-14 group-hover:duration-300 group-hover:w-fit`}
+                  >
+                    {menu?.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </aside>
+
       <div className={`ml-auto ${open ? "mr-72" : "mr-16"}`}>
-      <Navbar sidebarOpen={open} />
+        <Navbar sidebarOpen={open} />
 
         {/* Render your navbar items here */}
         {/* Adjust the CSS classes and layout based on your specific navbar implementation */}

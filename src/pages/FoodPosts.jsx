@@ -4,7 +4,9 @@ import { Layout } from '../components'
 const FoodPosts = () => {
   return (
     <Layout>
-    <div>FoodPosts</div>
+    <div
+    className='flex place-items-center'
+    >FoodPosts</div>
 
     </Layout>
   )

@@ -2,9 +2,10 @@ import { Fragment, useContext } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Logo from "../assests/data/logos/login.png";
+
 import { AuthContext } from "../contexts/authContext/AuthContext";
 import { logout } from "../contexts/authContext/AuthActions";
-
+import { motion } from "framer-motion";
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Team", href: "#", current: false },
@@ -37,16 +38,17 @@ export default function Navbar({ sidebarOpen }) {
                 </Disclosure.Button>
               </div>
               {sidebarOpen ? (
-                <a
-                  href=""
-                  className={`flex items-center`}
-                  style={{ marginLeft: "250px" }}
+                <motion.div
+                  animate={{ x: 250 }}
+                  transition={{ duration: 1, stiffness: 100, type: "spring" }}
                 >
-                  <img src={Logo} className="h-8 mr-3" alt="Food Care Logo" />
-                  <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-                    Food Care
-                  </span>
-                </a>
+                  <a href="" className={`flex items-center`}>
+                    <img src={Logo} className="h-8 mr-3" alt="Food Care Logo" />
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
+                      Food Care
+                    </span>
+                  </a>
+                </motion.div>
               ) : (
                 <a href="" className={`flex items-center`}>
                   <img src={Logo} className="h-8 mr-3" alt="Food Care Logo" />
