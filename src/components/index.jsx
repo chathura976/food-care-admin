@@ -15,3 +15,4 @@ export { default as ChartsHeader } from './ChartsHeader';
 export { default as Header } from './Header';
 export { default as Admin } from './Admin';
 export { default as Layout } from './Layout';
+export {default as Card } from './Card' ;

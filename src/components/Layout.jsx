@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Sidebar } from "../components";
-
+import {LineChart} from "../components";
 const Layout = ({ children }) => {
   const divRef = useRef(null);
 
@@ -29,6 +29,7 @@ const Layout = ({ children }) => {
 
         <div ref={divRef} className="flex items-center">
           {children}
+          
         </div>
       </div>
     </>
