@@ -1,7 +1,9 @@
 // Dashboard.js
 import React from "react";
-import { Layout, LineChart } from "../components";
-import Card from '../components/Card';
+import { Layout, LineChart} from "../components";
+import Card from "../components/Card";
+import {PieChart} from "../components";
+
 
 const Dashboard = () => {
   const stats = [];
@@ -9,16 +11,19 @@ const Dashboard = () => {
   return (
     <>
       <Layout>
-        <div className="flex flex-col gap-4">
+      
+        <div className=" gap-4 ">
           {/* Cards */}
           <Card stats={stats} />
           {/* Add more cards here as needed */}
+          
+          {/* Line Chart */}
+          <div className=" flex mt-8">
+            <LineChart />
+           <PieChart/>
+          </div>
         </div>
-
-        {/* Line Chart */}
-        <div className="mt-8">
-          <LineChart />
-        </div>
+        
       </Layout>
     </>
   );

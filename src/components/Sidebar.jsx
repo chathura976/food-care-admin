@@ -15,7 +15,7 @@ const Sidebar = () => {
     { name: "Chat", link: "/Chat", icon: FiMessageSquare },
     { name: "FoodPosts", link: "/FoodPosts", icon: MdOutlineFastfood },
     { name: "Calendar", link: "/Calender", icon: BsCalendarMonth },
-    { name: "Setting", link: "/", icon: RiSettings4Line },
+    { name: "Settings", link: "/", icon: RiSettings4Line },
   ];
 
   const [open, setOpen] = useState(true);

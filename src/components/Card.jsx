@@ -21,19 +21,19 @@ const cardData = [
   },
   {
     id: 2,
-    title: `Posts on the Wall Count= ${userCount}`,
+    title: `Posts on the Wall= ${userCount}`,
     description: "",
     imageUrl: card2,
   },
   {
     id: 3,
-    title: `Community Posts Count = ${CpostCount}`,
+    title: `Community Posts = ${CpostCount}`,
     description: "",
     imageUrl: card3,
   },
   {
     id: 4,
-    title:  `Completed Posts Count= ${CpostCount}`,
+    title:  `Completed Posts= ${CpostCount}`,
     description: "",
     imageUrl: card4,
   },
@@ -58,11 +58,7 @@ export default function MultiActionAreaCard() {
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions>
-            <Button size="small" color="primary">
-              Share
-            </Button>
-          </CardActions>
+          
         </Card>
       ))}
     </div>

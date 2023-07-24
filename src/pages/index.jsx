@@ -10,7 +10,7 @@ export { default as Bar } from './Charts/Bar';
 export { default as ColorMapping } from './Charts/ColorMapping';
 export { default as FoodPosts } from './FoodPosts';
 export { default as Line } from './Charts/Line';
-export { default as Pie } from './Charts/Pie';
+export { default as PieChart } from './Charts/PieChart';
 export { default as Pyramid } from './Charts/Pyramid';
 export { default as Stacked } from './Charts/Stacked';
 export { default as Chat } from './Chat';
