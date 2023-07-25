@@ -2,15 +2,13 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import { CardActionArea} from "@mui/material";
 import card1 from "../assests/data/Dashboard/card1.jpeg";
 import card2 from "../assests/data/Dashboard/card2.png";
 import card3 from "../assests/data/Dashboard/card3.jpg";
 import card4 from "../assests/data/Dashboard/card4.jpeg";
 const userCount = 1000;
-const PostCount = 1000;
 const CpostCount = 1000;
-const CompleteCount = 1000;
 
 const cardData = [
   {

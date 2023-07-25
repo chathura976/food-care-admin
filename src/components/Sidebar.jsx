@@ -4,7 +4,7 @@ import { MdOutlineDashboard, MdOutlineFastfood } from "react-icons/md";
 import { RiSettings4Line } from "react-icons/ri";
 import { BsCalendarMonth } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
-import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
+import { FiMessageSquare} from "react-icons/fi";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
@@ -20,9 +20,7 @@ const Sidebar = () => {
 
   const [open, setOpen] = useState(true);
 
-  const toggleSidebar = () => {
-    setOpen((prevState) => !prevState);
-  };
+
 
   return (
     <div className="flex gap-6 main-content">

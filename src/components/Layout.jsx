@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
-import { Navbar, Sidebar } from "../components";
-import { LineChart } from "../components";
+import { Sidebar } from "../components";
+
 const Layout = ({ children }) => {
   const divRef = useRef(null);
 
