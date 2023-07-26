@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Layout } from "../components";
-import axios from "axios";
 import User from "../assests/user.png";
+import useFetchUsers from "../api/userFetch";
 const Users = () => {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get("/api/users/users");
-        setUsers(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchUsers();
-  }, []);
+  const users = useFetchUsers();
 
   return (
     <Layout>
