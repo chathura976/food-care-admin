@@ -5,6 +5,7 @@ import { RiSettings4Line } from "react-icons/ri";
 import { BsCalendarMonth } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiMessageSquare} from "react-icons/fi";
+import { AiOutlineTeam } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
@@ -14,12 +15,13 @@ const Sidebar = () => {
     { name: "Users", link: "/Users", icon: AiOutlineUser },
     { name: "Chat", link: "/Chat", icon: FiMessageSquare },
     { name: "FoodPosts", link: "/FoodPosts", icon: MdOutlineFastfood },
+    { name: "Community", link: "/Community", icon: AiOutlineTeam },
     { name: "Calendar", link: "/Calender", icon: BsCalendarMonth },
     { name: "Settings", link: "/", icon: RiSettings4Line },
   ];
 
   const [open, setOpen] = useState(true);
-
+  const [activeMenu, setActiveMenu] = useState("");
 
 
   return (
@@ -53,7 +55,10 @@ const Sidebar = () => {
                   key={i}
                   className={`${
                     menu?.margin && "mt-5"
-                  } group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md`}
+                  } group flex items-center text-sm gap-3.5 font-medium p-2 hover:bg-gray-800 rounded-md ${
+                    activeMenu === menu?.name && "bg-blue-500"
+                  }`}
+                    onClick={() => setActiveMenu(menu?.name)}
                 >
                   <div>{React.createElement(menu?.icon, { size: "20" })}</div>
                   <span
