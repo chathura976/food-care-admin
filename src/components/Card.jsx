@@ -9,6 +9,8 @@ import card3 from "../assests/data/Dashboard/card3.jpg";
 import card4 from "../assests/data/Dashboard/card4.jpeg";
 import useFetchUsers from "../api/userFetch";
 import useFetchFooDs from "../api/foodFetch";
+import CountUp from "react-countup";
+
 const CpostCount = 1000;
 
 export default function MultiActionAreaCard() {
@@ -39,7 +41,7 @@ export default function MultiActionAreaCard() {
     },
     {
       id: 3,
-      title: `Community Posts = ${CpostCount}`,
+      title: `Community Posts= ${CpostCount} `,
       description: "",
       imageUrl: card3,
     },
@@ -65,12 +67,12 @@ export default function MultiActionAreaCard() {
                 {/* Use CountUp component here for the count animation */}
                 <CountUp
                   start={0}
-                  end={parseInt(card.title.split('=')[1].trim())}
+                  end={parseInt(card.title.split("=")[1].trim())}
                   duration={3}
                   separator=","
                   decimals={0}
                   decimal="."
-                  prefix={card.title.split('=')[0].trim()}
+                  prefix={card.title.split("=")[0].trim()}
                 />
               </Typography>
               <Typography
@@ -87,4 +89,3 @@ export default function MultiActionAreaCard() {
     </div>
   );
 }
-

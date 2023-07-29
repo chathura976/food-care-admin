@@ -5,8 +5,7 @@ const FoodPosts = () => {
   return (
     <Layout>
     <div
-    className='flex place-items-center'
-    >FoodPosts</div>
+    className='flex place-items-center'>FoodPosts</div>
 
     </Layout>
   )
