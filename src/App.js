@@ -12,7 +12,8 @@ import FoodPosts from "../src/pages/FoodPosts";
 import Calendar from "../src/pages/Calendar";
 import Users from "../src/pages/Users";
 import Chat from "../src/pages/Chat";
-import { AuthContext } from "./contexts/authContext/AuthContext";
+import {UserFeedback}   from "./pages";
+import {AuthContext}  from "./contexts/authContext/AuthContext";
 
 const App = () => {
   const { user } = useContext(AuthContext);
@@ -28,6 +29,7 @@ const App = () => {
             <Route path="/Calendar" element={<Calendar />} />
             <Route path="/users" element={<Users />} />
             <Route path="/Chat" element={<Chat />} />
+            <Route path="/UserFeedback" element={<UserFeedback/>}/>
           </>
         )}
       </Routes>
