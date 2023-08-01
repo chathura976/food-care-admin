@@ -8,3 +8,4 @@ export { default as Calendar } from './Calendar';
 export { default as FoodPosts } from './FoodPosts';
 export { default as Chat } from './Chat';
 export {default as UserFeedback} from './UserFeedback';
+export { default as Community } from './Community';
