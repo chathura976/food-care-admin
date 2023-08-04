@@ -6,7 +6,8 @@ import { BsCalendarMonth } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiMessageSquare} from "react-icons/fi";
 import { AiOutlineTeam } from "react-icons/ai";
-import {VscFeedback} from "react-icons/vsc"
+import {RiAdminLine} from "react-icons/ri";
+import {VscFeedback} from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
@@ -19,7 +20,10 @@ const Sidebar = () => {
     { name: "Community", link: "/Community", icon: AiOutlineTeam },
     { name: "Calendar", link: "/Calender", icon: BsCalendarMonth },
     { name: "UserFeedback", link: "/UserFeedback", icon: VscFeedback },
+    { name: "Admin", link: "/Admin", icon:  RiAdminLine },
     { name: "Settings", link: "/", icon: RiSettings4Line },
+    
+
   ];
 
   const [open, setOpen] = useState(true);
