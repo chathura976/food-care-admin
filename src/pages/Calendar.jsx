@@ -1,15 +1,11 @@
-import React from 'react';
-import { Layout } from '../components';
-
+import React from "react";
+import { Layout } from "../components";
 const Calendar = () => {
   return (
-    <>
     <Layout>
-    
+      <div>Calendar</div>
+    </Layout>
+  );
+};
 
-       </Layout> 
-       </>
-  )
-}
-
-export default Calendar
+export default Calendar;
