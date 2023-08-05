@@ -12,7 +12,12 @@ import FoodPosts from "../src/pages/FoodPosts";
 import Calendar from "../src/pages/Calendar";
 import Users from "../src/pages/Users";
 import Chat from "../src/pages/Chat";
+
+import Community from "../src/pages/Community";
+import {UserFeedback}   from "./pages";
+
 import {Admin, UserFeedback}   from "./pages";
+
 import {AuthContext}  from "./contexts/authContext/AuthContext";
 
 const App = () => {
@@ -30,7 +35,11 @@ const App = () => {
             <Route path="/users" element={<Users />} />
             <Route path="/Chat" element={<Chat />} />
             <Route path="/UserFeedback" element={<UserFeedback/>}/>
+
+            <Route path="/Community" element={<Community />} />
+
             <Route path="/Admin" element={<Admin/>}/>
+
 
           </>
         )}
