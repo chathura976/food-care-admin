@@ -11,5 +11,5 @@ export { default as Chat } from './Chat';
 export {default as UserFeedback} from './UserFeedback';
 export { default as Community } from './Community';
 
-export { default as UserFeedback} from './UserFeedback';
+
 
