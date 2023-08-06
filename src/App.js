@@ -27,9 +27,6 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={user ? <Navigate to="/dashboard" /> : <Login />} />
-        <Route path="/foodposts" element={user ? <Navigate to="/dashboard" /> : <FoodPosts />} />
-        <Route path="/Calendar" element={user ? <Navigate to="/dashboard" /> : <Calendar />} />
-     
         {user && (
           <>
             <Route path="/dashboard" element={<Dashboard />} />
