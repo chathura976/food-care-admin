@@ -89,6 +89,7 @@ const Slideshow = () => {
 const FoodPosts = () => {
   return (
     <Layout>
+
       <div className="" >
         <div className="container mx-auto border  border-black mx-auto my-auto flex  w-full md:max-w-2xl justify-center align-center" id='food'>
           <div className="slideshow-container flex-3 w-full md:max-w-2xl md:mr-4" >
@@ -97,6 +98,7 @@ const FoodPosts = () => {
           <FormSection />
         </div>
       </div>
+
     </Layout>
   );
 };

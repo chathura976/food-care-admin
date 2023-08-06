@@ -7,22 +7,28 @@ import { login } from "../contexts/authContext/apiCalls";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [deviceToken, setDeviceToken] = useState("default_device_token");
   const { isFetching, dispatch } = useContext(AuthContext);
+
   const handleLogin = (e) => {
     e.preventDefault();
-    login({ email, password }, dispatch);
+    login({ email, password ,deviceToken}, dispatch);
   };
   return (
     <section class="">
       <div class="">
         <div className="relative w-full h-screen bg-zinc-900/90">
+        <div
+            className="absolute top-0 left-0 w-full h-full"
+            style={{ backgroundColor: "rgb(57, 54, 70)" }} // Set the desired color here
+          ></div>
+
           <img
             className="w-full h-full object-cover mix-blend-overlay"
             src={LoginImg}
             alt=""
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+            style={{ backgroundColor: "rgb(57, 54, 70)" }}
           />
-
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <div className="flex justify-center items-center h-full">
               <form className="max-w-[400px] w-full mx-auto bg-gray p-8 rounded-lg">

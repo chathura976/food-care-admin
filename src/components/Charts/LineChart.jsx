@@ -34,7 +34,7 @@ export const options = {
 
 export function LineChart() {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto ">
     <Chart
       chartType="Line"
       width="100%"
