@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Avatar from 'react-avatar';
+
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -17,13 +17,7 @@ export default function RecipeReviewCard() {
   return (
     <div className="relative w-100 flex flex-col shadow-lg mb-6 mt-12">
       <div className="p-4 flex items-center justify-between">
-        <Avatar
-          size={40}
-          round={true}
-          className="bg-red-500"
-          name="R"
-          aria-label="recipe"
-        />
+       
         <IconButton aria-label="settings">
           <MoreVertIcon />
         </IconButton>
