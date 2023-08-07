@@ -13,7 +13,8 @@ export { default as Stacked } from './Charts/Stacked';
 export { default as PieChart } from './Charts/PieChart';
 export { default as ChartsHeader } from './ChartsHeader';
 export { default as Header } from './Header';
-export { default as Admin } from './Admin';
+
 export { default as Layout } from './Layout';
 export {default as Card } from './Card' ;
 export {default as FeedbackCard} from './FeedbackCard';
+export {default as AdminCard} from './AdminCard';
