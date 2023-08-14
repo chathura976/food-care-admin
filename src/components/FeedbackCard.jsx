@@ -5,7 +5,6 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import Avatar from "@mui/material/Avatar";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import IconButton from "@mui/material/IconButton";
 import {
@@ -15,7 +14,7 @@ import {
   DialogActions,
   Button,
 } from "@mui/material";
-import { Layout } from "../components";
+
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
 const StyledCard = styled(Card)({
